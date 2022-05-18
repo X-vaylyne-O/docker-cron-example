@@ -62,6 +62,9 @@ pipeline {
 					label 'pacific'
 				}
 			}
+            steps {
+				sh 'apt-get update && apt-get install -y software-properties-common python-software-properties && apt-get update'
+			}
 		}
 		stage('Prep') {
 			when {
