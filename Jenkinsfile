@@ -63,7 +63,7 @@ pipeline {
 				}
 			}
             steps {
-				sh 'apt-get update'
+				sh '-v /path/to/cron_docker/logs:/var/log cron-example'
 			}
 		}
 		stage('Prep') {
